@@ -1,5 +1,8 @@
 package com.vehicle.model.dto;
 
+import javax.persistence.Embeddable;
+
+@Embeddable
 public class User {
 
     String firstName;
