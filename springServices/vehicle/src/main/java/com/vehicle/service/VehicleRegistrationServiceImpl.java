@@ -1,7 +1,7 @@
-package com.main.vehicle.Service;
+package com.vehicle.service;
 
-import com.main.vehicle.Model.Vehicle;
-import com.main.vehicle.Repository.VehicleRepository;
+import com.vehicle.model.domain.Vehicle;
+import com.vehicle.repository.VehicleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -10,7 +10,7 @@ import java.util.List;
 
 @Service
 @Transactional
-public class VehicleRegistrationService implements IVehicleRegistrationService {
+public class VehicleRegistrationServiceImpl implements VehicleRegistrationService {
 
     @Autowired
     VehicleRepository vehicleRepository;

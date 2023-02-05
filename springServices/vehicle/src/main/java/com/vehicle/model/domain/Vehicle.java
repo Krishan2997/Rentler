@@ -1,4 +1,6 @@
-package com.main.vehicle.Model;
+package com.vehicle.model.domain;
+
+import com.vehicle.model.dto.User;
 
 import javax.persistence.*;
 
@@ -9,6 +11,8 @@ public class Vehicle {
 
     @Column(name = "VehicleName")
     String vehicleName;
+
+    User userDetails;
 
     public Vehicle(){}
 
