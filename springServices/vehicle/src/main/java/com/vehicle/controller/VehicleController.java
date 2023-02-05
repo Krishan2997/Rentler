@@ -1,7 +1,7 @@
-package com.main.vehicle.Controller;
+package com.vehicle.controller;
 
-import com.main.vehicle.Model.Vehicle;
-import com.main.vehicle.Service.IVehicleRegistrationService;
+import com.vehicle.model.domain.Vehicle;
+import com.vehicle.service.VehicleRegistrationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,9 +11,9 @@ import java.util.List;
 public class VehicleController {
 
     @Autowired
-    IVehicleRegistrationService vehicleRegistrationService;
+    VehicleRegistrationService vehicleRegistrationService;
 
-    @RequestMapping(value = "addVehicle", method = RequestMethod.POST)
+    @RequestMapping(value = "/addVehicle", method = RequestMethod.POST)
     public String addVehicle(@RequestBody Vehicle vehicle){
         try{
             vehicleRegistrationService.addVehicle(vehicle);
@@ -24,7 +24,7 @@ public class VehicleController {
         }
     }
 
-    @RequestMapping(value = "getAllVehicles", method = RequestMethod.POST)
+    @RequestMapping(value = "/getAllVehicles", method = RequestMethod.POST)
     public List<Vehicle> getAllVehicles(){
         try{
             return vehicleRegistrationService.getAllVehicles();
@@ -34,7 +34,7 @@ public class VehicleController {
         }
     }
 
-    @RequestMapping(value = "getVehicle", method = RequestMethod.GET)
+    @RequestMapping(value = "/getVehicle", method = RequestMethod.GET)
     public Vehicle getVehicle(@RequestParam String id){
         try{
             return vehicleRegistrationService.getVehicleById(id);

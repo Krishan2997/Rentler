@@ -1,10 +1,10 @@
-package com.main.vehicle.Service;
+package com.vehicle.service;
 
-import com.main.vehicle.Model.Vehicle;
+import com.vehicle.model.domain.Vehicle;
 
 import java.util.List;
 
-public interface IVehicleRegistrationService {
+public interface VehicleRegistrationService {
     public boolean addVehicle(Vehicle vehicle);
     public List<Vehicle> getAllVehicles();
     public Vehicle getVehicleById(String id);
